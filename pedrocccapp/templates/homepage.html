@@ -12,6 +12,13 @@
 </head>
 
 <body style="background-color: whitesmoke;">
+
+  {% if request.user.is_authenticated %}
+    <b>Bem-vindo, {{ request.user.username }}</b>
+    <br>
+    <a href="/users/logout"><u style="color:blue">Sair</u></a>
+  {% endif %}
+  
   <h1 style="text-align: center;">SATA ANDAGI</h1>
   <h3 style="text-align: center;"><i>O bolinho de chuva de Okinawa</i> </h3>
   <h6 style="text-align: center;">Pedro Coelho Carneiro da Cunha</h6>

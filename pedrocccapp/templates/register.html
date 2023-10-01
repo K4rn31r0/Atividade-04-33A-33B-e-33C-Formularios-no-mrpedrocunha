@@ -1,0 +1,19 @@
+<h1>{{ action }} usuário</h1>
+
+<form method="post"> 
+  {% csrf_token %}
+  <div>
+    <label>Username:</label>
+    <input type="text" name="username">
+  </div>
+  <div>
+    <label>E-Mail:</label>
+    <input type="email" name="email">
+  </div>
+  <div>
+    <label>Senha:</label>
+    <input type="password" name="password">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>

@@ -25,5 +25,8 @@ urlpatterns = [
     path('addtips/delete/<id>', views.forms_tips_delete),
     path('addsteps', views.forms_steps),
     path('addsteps/update/<id>', views.forms_steps_update),
-    path('addsteps/delete/<id>', views.forms_steps_delete)
+    path('addsteps/delete/<id>', views.forms_steps_delete),
+    path('users', views.create_user),
+    path('users/login', views.login_user, name="login"),
+    path('users/logout', views.logout_user, name="logout"),
 ]
