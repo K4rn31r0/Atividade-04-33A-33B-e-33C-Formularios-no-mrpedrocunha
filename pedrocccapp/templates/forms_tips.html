@@ -1,0 +1,26 @@
+<h1>{{ formtype }} Dicas</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="title" value="{{ tip.title }}"> 
+  </div>
+  <div>
+    <label>Tipo:</label>
+    <input name="tipType" value="{{ tip.tipType }}"> 
+  </div>
+  <div>
+    <label for="importance">Importância:</label>
+    <select name="importance">
+      <option value="I">Importante</option>
+      <option value="R">Relevante</option>
+      <option value="U">Irrelevante</option>
+    </select>
+  </div>
+  <div>
+    <label>Aviso:</label>
+    <input name="warning" value="{{ tip.warning }}"> 
+  </div>
+  <input type="submit" value="Registrar">
+</form>

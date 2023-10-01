@@ -1,0 +1,22 @@
+<h1>{{ formtype }} Passos</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="title" value="{{ step.title }}"> 
+  </div>
+  <div>
+    <label>Passo número:</label>
+    <input type="number" name="stepNum" value="{{ step.stepNum }}"> 
+  </div>
+  <div>
+    <label>Utensílios:</label>
+    <input name="utensils" value="{{ step.utensils }}">
+  </div>
+  <div>
+    <label>Ingredientes:</label>
+    <input name="ingredients" value="{{ step.ingredients }}"> 
+  </div>
+  <input type="submit" value="Registrar">
+</form>

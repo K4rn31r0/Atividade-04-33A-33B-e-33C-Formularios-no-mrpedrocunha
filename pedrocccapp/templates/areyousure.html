@@ -1,0 +1,7 @@
+<h1 style="color: red;">VOCÊ TEM CERTEZA QUE QUER DELETAR ESSE ELEMENTO? ESSA AÇÃO NÃO PODE SER DESFEITA.</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="submit" name="confirm" value="SIM">  
+  <input type="submit" name="deny" value="NÃO"> 
+</form>

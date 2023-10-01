@@ -1,0 +1,132 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/style.css' %}">
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sata Andagi</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color: whitesmoke;">
+  <h1 style="text-align: center;">SATA ANDAGI</h1>
+  <h3 style="text-align: center;"><i>O bolinho de chuva de Okinawa</i> </h3>
+  <h6 style="text-align: center;">Pedro Coelho Carneiro da Cunha</h6>
+
+  <div class="center-div">
+    <img src="https://i.pinimg.com/736x/a8/05/51/a80551ad8901ce8fc607e03ca085906e.jpg">
+    <p style="text-align: justify" class="textbox-size"><b>Sata Andagi</b> é um bolinho doce japonês, muito consumido na
+      região de Okinawa. Originou-se no sul da China, e depois foi exportado para o sul do Japão, fazendo parte agora da
+      cultura do local. Apesar de ser comparável, em termos de preparo (fritura em óleo), aos donuts americanos
+      modernos, a
+      consistência interna não é tão aerada, tornando-o um pouco menos macio, mas ainda muito saboroso e prático. O
+      preparo é rápido e os ingredientes são baratos e fáceis de encontrar (pelo menos no Japão), além de facilmente
+      conseguirem durar um ou dois dias fora da geladeira no clima de Okinawa (que é similar ao do Rio, quente e úmido).
+      Abaixo há uma
+      receita simples caso você queira fazê-los em casa.<br><br> <a href="https://pt.wikipedia.org/wiki/Sata_andagi"
+        target="_blank">Clique
+        aqui para acessar o artigo dessa iguaria na
+        Wikipedia.</a><br><a href="https://www.justonecookbook.com/sata-andagi/" target="_blank">Acesse também o site da
+        receita
+        original aqui!</a>
+    </p>
+  </div>
+
+  <h2 style="text-align: center;"><b>Ingredientes</b></h2>
+
+  <div>
+    <table class="center-table">
+      <tr>
+        <th>Ingrediente</th>
+        <th>Quantidade</th>
+      </tr>
+      <tr>
+        <td>Ovo</td>
+        <td>1 unidade</td>
+      </tr>
+      <tr>
+        <td>Farinha de trigo</td>
+        <td>1 xícara (se precisar use mais)</td>
+      </tr>
+      <tr>
+        <td>Óleo de cozinha (fritura)</td>
+        <td>O suficiente para o tamanho de sua panela</td>
+      </tr>
+      <tr>
+        <td>Óleo de cozinha (massa)</td>
+        <td>1 colher de sopa</td>
+      </tr>
+      <tr>
+        <td>Açúcar mascavo de Okinawa</td>
+        <td>1/3 de xícara</td>
+      </tr>
+      <tr>
+        <td>Sal de cozinha</td>
+        <td>1 pitada</td>
+      </tr>
+      <tr>
+        <td>Fermento (bicarbonato)</td>
+        <td>1 colher de sopa</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="text-align: center;">
+    <!--ul>
+      <li>O açúcar mascavo de Okinawa pode ser facilmente substituído por mascavo comum.</li>
+      <li>É recomendado (porém não necessário por um dia) guardar as sobras na geladeira ou no freezer.</li>
+      <li>Serve aproximadamente 8 porções! Multiplique as quantidades dos ingredientes caso deseje fazer mais.</li>
+    </ul> -->
+
+    <ul>
+      {% for tip in Dicas %}
+      <li> {{ tip.title }} 
+      <a href="/addtips/update/{{ tip.id }}">Atualizar</a>
+      <a href="/addtips/delete/{{ tip.id }}">Deletar</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <a href="/addtips">Adicionar nova dica</a>
+  </div>
+
+  <h2 style="text-align: center;"><b>Passo-a-passo</b></h2>
+
+  <div style="text-align: center;">
+    <!-- ol>
+      <li>Junte o <u style="color: red;">ovo</u> e o <u style="color: red;">açúcar</u> em uma bacia.
+        Misture.</li>
+      <li>Adicione a colher de <u style="color: red;">óleo</u> e misture mais.</li>
+      <li>Adicione à massa: <u style="color: red;">farinha, sal e fermento.</u> Continue misturando. Se a massa estiver
+        muito molhada, adicione mais farinha.</li>
+      <li>Aqueça o <u style="color: red;">óleo</u> na panela até ficar quente o suficiente. </li>
+      <li>Passe óleo nas mãos para impedir que a massa grude nelas, e role a massa em pequenas bolinhas.</li>
+      <li>Coloque as bolinhas no óleo fervendo. Cuidado, elas crescem! Não coloque muitas de uma vez.</li>
+      <li>Quando elas estiverem prontas, as bolinhas flutuarão. Se quiser, vire-as para que fiquem douradas igualmente.
+      </li>
+      <li>Remova-as da panela e seque o excesso de óleo. Espere esfriar e aproveite!</li>
+    </ol> -->
+
+    <ol>
+      {% for step in Receita %}
+      <li> {{ step.title }} 
+      <a href="/addsteps/update/{{ step.id }}">Atualizar</a>
+      <a href="/addsteps/delete/{{ step.id }}">Deletar</a>
+      </li>
+      {% endfor %}
+    </ol>
+    <br>
+    <a href="/addsteps">Adicionar novo passo</a>
+    
+  </div>
+
+  <h1 style="text-align: center;">BOM APETITE ;)</h1>
+
+  <h5 style="text-align: center;"><a href="https://www.youtube.com/watch?v=pquWcqqd_b4&ab_channel=lllBlackDragonlll"
+      target="_blank">...</a></h5>
+</body>
+
+</html>

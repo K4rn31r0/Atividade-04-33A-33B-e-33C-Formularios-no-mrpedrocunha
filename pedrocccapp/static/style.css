@@ -1,0 +1,37 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Georgia"; monospace;
+}
+
+h2 {
+  font-family: "Arial"; monospace;
+}
+
+.center-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textbox-size {
+  width: 700px
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: 900px;
+}
+
+ul, ol {
+  display: inline-block;
+  text-align: left;
+}
